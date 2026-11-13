@@ -1,6 +1,7 @@
 import { expect, it } from "vitest";
+import { number } from "zod";
 
-export const getName = (params: { first: string; last: string }) => {
+export const getName = (params: { first: string; last?: string }) => {
   if (params.last) {
     return `${params.first} ${params.last}`;
   }
